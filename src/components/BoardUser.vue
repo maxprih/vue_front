@@ -28,9 +28,6 @@
             @input="this.loadGraph(point.r)" />
         </div>
         <button @click="save" class="btn btn-primary" style="margin-top:10px">Submit</button>
-
-
-
       </div>
       <div class="col-md-6">
         <div style="text-align: center; width: 40%;display: flex;">
@@ -80,7 +77,6 @@ export default {
   name: "User",
   data() {
     return {
-      currentPoint: null,
       points: [],
       point: {
         x: 1,
@@ -88,7 +84,6 @@ export default {
         r: 1,
         hit: false
       },
-      canvasVue: null,
       c: null,
       ctx: null,
       radiusOnGraph: null,
@@ -349,14 +344,13 @@ export default {
     this.c = document.getElementById("graph");
     if (this.c) {
       this.c.width = 400;
-    this.c.height = 400;
-    this.radiusOnGraph = (this.c.width - 30) / 2;
-    this.ctx = this.c.getContext("2d");
-    this.canvasVue = this.ctx;
-    this.startGraph();
-    this.loadGraph(1);
+      this.c.height = 400;
+      this.radiusOnGraph = (this.c.width - 30) / 2;
+      this.ctx = this.c.getContext("2d");
+      this.startGraph();
+      this.loadGraph(1);
     }
-    
+
   },
 };
 </script>

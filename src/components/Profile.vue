@@ -4,35 +4,36 @@
       <strong>{{ currentUser.username }}</strong> Profile
     </div>
     <div style="display:flex;justify-content: space-between;">
-    <div>
-      <ul class="list-group" style="width:fit-content">
-        <li class="list-group-item d-flex align-items-center">
-          <strong>Your id:</strong>
-          <span class="badge badge-primary badge-pill">{{ currentUser.id }}</span>
-        </li>
-        <li class="list-group-item d-flex align-items-center">
-          <strong>Your email:</strong>
-          <span class="badge badge-primary badge-pill">{{ currentUser.email }}</span>
-        </li>
-        <li class="list-group-item d-flex align-items-center">
-          <strong>Your authorities:</strong>
-          <span class="badge badge-info badge-pill">{{ currentUser.roles[0] }}</span>
-        </li>
-        <li class="list-group-item d-flex align-items-center">
-          <strong>Number of your points:</strong>
-          <span class="badge badge-success badge-pill">{{ points.length }}</span>
-          <button type="button" class="btn btn-outline-danger" @click="deletePoints()"> Delete <strong>all</strong> your
-            points</button>
-        </li>
-      </ul>
-    </div>
-    <div class="card" style="width:40%;">
-      <img class="card-img-top prof_image" alt="Card image cap" style="width:100%; height: 100px;">
-      <div class="card-body">
-        <p class="card-text">Modern responsive design Vue.JS Senior Developer</p>
+      <div>
+        <ul class="list-group" style="width:fit-content">
+          <li class="list-group-item d-flex align-items-center">
+            <strong>Your id:</strong>
+            <span class="badge badge-primary badge-pill">{{ currentUser.id }}</span>
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <strong>Your email:</strong>
+            <span class="badge badge-primary badge-pill">{{ currentUser.email }}</span>
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <strong>Your authorities:</strong>
+            <span class="badge badge-info badge-pill">{{ currentUser.roles[0] }}</span>
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <strong>Number of your points:</strong>
+            <span class="badge badge-success badge-pill">{{ points.length }}</span>
+            <button type="button" class="btn btn-outline-danger" @click="deletePoints()"> Delete <strong>all</strong>
+              your
+              points</button>
+          </li>
+        </ul>
+      </div>
+      <div class="card" style="width:40%;">
+        <img class="card-img-top prof_image" alt="Card image cap" style="width:100%; height: 100px;">
+        <div class="card-body">
+          <p class="card-text">Modern responsive design Vue.JS Senior Developer</p>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -83,19 +84,21 @@ export default {
   margin-left: 10px;
 }
 
-@media only screen and (max-width: 738px){
+@media only screen and (max-width: 738px) {
   .prof_image {
-    content:url("../../assets/cat.jpg")
+    content: url("../../assets/cat.jpg")
   }
 }
-@media only screen and (min-width: 739px) and (max-width:1039px){
+
+@media only screen and (min-width: 739px) and (max-width:1039px) {
   .prof_image {
-    content:url("../../assets/kotik.jpeg")
+    content: url("../../assets/kotik.jpeg")
   }
 }
-@media only screen and (min-width: 1040px){
+
+@media only screen and (min-width: 1040px) {
   .prof_image {
-    content:url("../../assets/KOTYARA.jpg")
+    content: url("../../assets/KOTYARA.jpg")
   }
 }
 </style>

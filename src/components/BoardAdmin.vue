@@ -20,7 +20,7 @@
             <td>{{ user.id }}</td>
             <td>{{ user.email }}</td>
             <td>{{ user.username }}</td>
-            <td v-if="user.roles[0].name == 'ROLE_USER'"><button @click="deleteUser(user.id)" class="btn btn-danger"
+            <td v-if="user.roles[0].name == 'ROLE_USER'"><button @click="deleteUser(user.id)" @mouseup="getAllUsers()" class="btn btn-danger"
                 style="width: 100%">Delete person</button></td>
             <td v-else>Can't delete admin</td>
           </tr>
@@ -76,7 +76,7 @@ export default {
           this.users = response.data;
         }
       )
-      .catch(err => console.error(err))
+        .catch(err => console.error(err))
     }
   }
 };

@@ -5,14 +5,13 @@
 </template>
 
 <script>
-
 export default {
   name: "Home"
 };
 </script>
 
 <style>
-  .centered {
-    margin-top: 25%;
-  }
+.centered {
+  margin-top: 25%;
+}
 </style>
